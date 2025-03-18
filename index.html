@@ -11,14 +11,14 @@
 
     <div class="principal-container">
       <section class="Home">
-        <h1 class="photographer-name">Fotografo Name</h1>
+        <h1 class="photographer-name">Nombre de Fotógrafo</h1>
 
         <div class="photographer-description">
           <p>
-            Hi, I'm Ciaron Fitz-Gerald, a freelance photographer and
-            videographer based in Sydney, Australia.
+            Hola, soy fotógrafo y videógrafo freelance, actualmente me encuentro
+            en Buenos Aires, Argentina.
           </p>
-          <p>Have a look at some of my work.</p>
+          <p>Te muestro algunos de mis trabajos</p>
         </div>
       </section>
 
@@ -141,10 +141,30 @@
         </div>
       </section>
 
-      <!-- SERVICES -->
+      <!-- CONTACT FORM -->
 
       <section>
-        <form action=""></form>
+        <div class="contact-container">
+          <h1>Contactame</h1>
+          <p>
+            Para más información sobre mis servicios o si tienes un proyecto en
+            mente, estaré encantado de escucharte. Te responderé a la brevedad.
+          </p>
+        </div>
+        <form action="" class="contact-form">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Nombre" required />
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <input type="text" name="reason" placeholder="Motivo" required />
+          <textarea
+            name="message"
+            placeholder="Mensaje"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Enviar</button>
+        </form>
       </section>
     </div>
   </body>
