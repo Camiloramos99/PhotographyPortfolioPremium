@@ -1,11 +1,13 @@
 body {
   display: grid;
   grid-template-columns: 15% auto 15%;
+  margin: 0%;
 }
 .principal-container {
   display: grid;
   grid-column: 2;
   height: auto;
+  margin-bottom: 50px;
 }
 
 /* HOME */
@@ -214,7 +216,7 @@ img:hover {
 }
 .service-box div p {
   width: 90%;
-  margin: 20px;
+  margin: 20px 0;
   margin-left: 50px;
   justify-self: center;
   color: white;
@@ -229,13 +231,14 @@ img:hover {
 /* CONTACT FORM */
 .contact-container {
   display: grid;
+  max-width: 90%;
   width: 500px;
   justify-items: center;
   justify-self: center;
 }
 .contact-container h1 {
   font-size: 35px;
-  margin-top: 110px;
+  margin-top: 40px;
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -245,6 +248,7 @@ img:hover {
   text-align: center;
   color: gray;
   font-size: 18px;
+  margin-top: 0;
 }
 .contact-form {
   max-width: 500px;
@@ -257,19 +261,15 @@ img:hover {
   flex-direction: column;
   gap: 15px;
 }
-
 .form-row {
   display: flex;
   gap: 10px;
 }
-
 .form-row input {
   flex: 1;
 }
-
 .contact-form input,
 .contact-form textarea {
-  width: 95%;
   padding: 12px;
   border: 1px solid #555;
   border-radius: 5px;
@@ -278,19 +278,16 @@ img:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
 }
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: white;
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
 }
-
 .contact-form button {
   background: white;
   color: black;
@@ -301,15 +298,63 @@ img:hover {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 .contact-form button:hover {
   background: #ddd;
   transform: scale(1.05);
 }
-
 @media (max-width: 600px) {
   .form-row {
     flex-direction: column;
-    gap: 0;
+    gap: 10px;
   }
+}
+/* BUTTON WHATSAPP */
+
+.btn-whatsApp {
+  position: fixed;
+  right: 2%;
+  bottom: 4%;
+  width: 150px;
+  height: 35px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.btn-whatsApp:hover {
+  color: #25d366;
+  background-color: #111;
+}
+
+/* FOOTER */
+
+footer {
+  grid-column: 1 / -1;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  margin: 0px;
+  text-align: center;
+  background-color: gray;
+  color: white;
+  padding: 40px;
+}
+footer a {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+footer a:hover {
+  color: #00a376;
+}
+footer p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 5px 0;
 }
