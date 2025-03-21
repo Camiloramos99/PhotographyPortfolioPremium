@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 body {
   display: grid;
   grid-template-columns: 15% auto 15%;
   margin: 0%;
+  overflow-x: hidden;
 }
 .principal-container {
   display: grid;
@@ -13,8 +17,8 @@ body {
 /* HOME */
 
 .home {
-  width: 100%;
-  height: 66%;
+  max-width: 100%;
+  min-height: 66vh;
 }
 .photographer-name {
   text-align: center;
@@ -30,8 +34,9 @@ body {
 
 .photographer-description > p:nth-child(2) {
   text-align: center;
-  color: gray;
+  color: black;
   font-size: 18px;
+  font-weight: 600;
 }
 
 /* GALLERY */
@@ -58,56 +63,49 @@ img:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   position: relative;
 }
-
 .photo-1 {
-  width: calc(100% + 0.5px);
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   transition: transform 1.3s ease;
 }
-
 .photo-1:hover {
   transform: scale(1.1);
 }
-
 .line1-gallery {
   display: grid;
-  width: calc(100% + 0.5px);
+  max-width: 100%;
   grid-template-columns: 50% 50%;
   gap: 1px;
 }
-
 .photo-container2,
 .photo-container3 {
   display: grid;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   overflow: hidden;
 }
-
 .photo-2,
 .photo-3 {
   max-width: 100%;
-  height: 100%;
+  max-height: 100%;
   object-fit: cover;
   transition: transform 1.3s ease;
 }
-
 .photo-2:hover,
 .photo-3:hover {
   transform: scale(1.1);
 }
-
 .photo-container4 {
-  width: 100%;
+  max-width: 100%;
 }
 .photo-4,
 .photo-5 {
-  width: calc(100% + 0.5px);
+  max-width: 100%;
   height: auto;
   transition: transform 1.3s ease;
 }
@@ -117,10 +115,10 @@ img:hover {
 }
 .photo-container5,
 .photo-container6 {
-  width: 100%;
+  max-width: 100%;
 }
 .photo-6 {
-  width: calc(100% + 0.5px);
+  max-width: 100%;
   height: auto;
   transition: transform 1.3s ease;
 }
@@ -128,7 +126,7 @@ img:hover {
   transform: scale(1.1);
 }
 .line2-gallery {
-  width: calc(100% + 0.5px);
+  max-width: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
   justify-content: space-between;
@@ -136,7 +134,7 @@ img:hover {
 .photo-container7 {
   display: grid;
   grid-column: 1;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 .photo-7,
@@ -153,15 +151,14 @@ img:hover {
 .photo-container8 {
   display: grid;
   grid-column: 2;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 /* SERVICES */
 
 .services-section {
-  width: 100%;
-  height: 100vh;
+  max-width: 100%;
 }
 .sessions-title {
   font-size: 35px;
@@ -177,15 +174,19 @@ img:hover {
 .services-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
   justify-items: center;
-  height: 50%;
   width: 100%;
   background-color: #fff;
+  align-items: stretch;
 }
 .service-box {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   position: relative;
   background: #333;
-  height: 100%;
   width: 90%;
   border: 0.5px solid gray;
   border-radius: 10px;
@@ -199,12 +200,11 @@ img:hover {
 }
 .package-title {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
   height: 20%;
-  width: 75%;
+  max-width: 100%;
   justify-self: center;
-  border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
 }
 .package-title h1 {
   position: absolute;
@@ -222,44 +222,52 @@ img:hover {
   color: white;
 }
 
-@media (max-width: 900px) {
-  .services-container {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* CONTACT FORM */
-.contact-container {
-  display: grid;
-  max-width: 90%;
-  width: 500px;
-  justify-items: center;
-  justify-self: center;
-}
-.contact-container h1 {
-  font-size: 35px;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #222;
-}
-.contact-container p {
-  text-align: center;
-  color: gray;
-  font-size: 18px;
-  margin-top: 0;
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 70px 40px;
 }
 .contact-form {
-  max-width: 500px;
-  margin: 0px auto 40px;
-  padding: 20px;
-  background: #111;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: center;
+}
+.contact-form h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+.contact-form p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white;
+  color: #333;
+  transition: border 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #666;
+  outline: none;
 }
 .form-row {
   display: flex;
@@ -268,29 +276,9 @@ img:hover {
 .form-row input {
   flex: 1;
 }
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: white;
-  background-color: rgba(255, 255, 255, 0.2);
-  outline: none;
-}
 .contact-form button {
-  background: white;
-  color: black;
+  background: #333;
+  color: white;
   border: none;
   padding: 12px;
   border-radius: 5px;
@@ -299,15 +287,10 @@ img:hover {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 .contact-form button:hover {
-  background: #ddd;
-  transform: scale(1.05);
+  background: #555;
+  transform: scale(1.03);
 }
-@media (max-width: 600px) {
-  .form-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
+
 /* BUTTON WHATSAPP */
 
 .btn-whatsApp {
@@ -357,4 +340,70 @@ footer p {
   font-size: 12px;
   line-height: 1.6;
   margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .photographer-description > p:nth-child(1) {
+    font-size: 15px;
+  }
+  .photographer-description > p:nth-child(2) {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .contact-container {
+    margin-bottom: 20px;
+  }
+  .contact-container p {
+    width: 90%;
+    font-size: 13px;
+  }
+  .contact-form {
+    width: 75%;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 5% auto 5%;
+  }
+  .home {
+    margin-top: 40px;
+    min-height: 33vh;
+  }
+  .photographer-description {
+    margin: 30px 5%;
+    text-align: center;
+  }
+  .services-container {
+    max-height: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 40px;
+    align-items: stretch;
+  }
+  .sessions-title {
+    text-align: center;
+  }
+  .service-box {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    box-sizing: border-box;
+  }
+  .service-box div p {
+    font-size: 15px;
+    margin: 10px 50px;
+  }
+  .service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  .sessions-title {
+    letter-spacing: 3px;
+  }
 }
