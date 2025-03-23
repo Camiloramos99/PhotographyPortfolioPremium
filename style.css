@@ -9,6 +9,8 @@ body {
   overflow-x: hidden;
 }
 .principal-container {
+  position: static;
+  z-index: -2;
   display: grid;
   grid-column: 2;
   height: 100%;
@@ -16,9 +18,35 @@ body {
 
 /* HOME */
 
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top;
+  z-index: -1;
+  filter: brightness(35%);
+}
 .home {
-  max-width: 100%;
-  min-height: 66vh;
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+.presentation-ph {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
 }
 .photographer-name {
   text-align: center;
@@ -32,7 +60,7 @@ body {
   line-height: 1.2;
 }
 .photographer-description {
-  margin-bottom: 60px;
+  margin-bottom: 85px;
   justify-items: center;
 }
 .photographer-description > p:nth-child(1) {
@@ -41,15 +69,15 @@ body {
   font-style: normal;
   line-height: 1.6;
   text-align: center;
-  font-size: 21px;
-  max-width: 700px;
+  font-size: 18px;
+  max-width: 1100px;
 }
 .photographer-description > p:nth-child(2) {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   text-align: center;
-  color: black;
+  color: white;
   font-size: 14px;
 }
 
@@ -158,7 +186,7 @@ body {
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #222;
+  color: white;
 }
 .services-container-general {
   justify-items: center;
@@ -170,7 +198,6 @@ body {
   gap: 10px;
   justify-items: center;
   width: 100%;
-  background-color: #fff;
   align-items: stretch;
 }
 .service-box {
@@ -391,14 +418,34 @@ footer p {
     margin-top: 40px;
     min-height: 33vh;
   }
+  .presentation-ph {
+    width: 70%;
+    margin-top: 0%;
+  }
   .photographer-name {
     font-size: 35px;
-    margin-top: 50px;
+    margin: 0%;
   }
   .photographer-description {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 0%;
     text-align: center;
+  }
+  .photographer-description > p:nth-child(1) {
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 14px;
+    max-width: 1100px;
+  }
+  .photographer-description > p:nth-child(2) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    color: white;
+    font-size: 14px;
   }
   .services-container {
     max-height: 100%;
