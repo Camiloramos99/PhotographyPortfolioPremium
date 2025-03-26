@@ -409,7 +409,11 @@ footer p {
     margin-top: 5px;
   }
 }
-
+@media (max-width: 767px) {
+  .background-image {
+    height: 100dvh;
+  }
+}
 @media (max-width: 900px) {
   body {
     grid-template-columns: 5% auto 5%;
