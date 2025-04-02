@@ -31,10 +31,10 @@ body {
 .home {
   position: relative;
   width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
-  flex-direction: column;
-  align-items: end;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
@@ -42,21 +42,32 @@ body {
 }
 .presentation-ph {
   position: absolute;
-  width: 50%;
+  width: 100%;
+  height: 35%;
   display: flex;
-  flex-direction: column;
-  margin-top: 70px;
+  flex-direction: row;
+  align-items: center;
+}
+.photo-perfil {
+  position: relative;
+  max-height: 80%;
+  width: auto;
+  aspect-ratio: 4649 / 4649;
 }
 .photographer-name {
-  text-align: center;
-  font-size: 42px;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  left: 3%;
+  text-align: left;
+  font-size: 60px;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 100;
   font-style: normal;
-  margin-top: 70px;
-  margin-bottom: 10px;
+  margin: 0px;
   line-height: 1.2;
+  letter-spacing: 8px;
 }
 .photographer-description {
   margin-bottom: 85px;
