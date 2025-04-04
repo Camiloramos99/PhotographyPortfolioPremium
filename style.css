@@ -30,7 +30,7 @@ body {
 .home {
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -467,23 +467,28 @@ footer p {
     grid-template-columns: 5% auto 5%;
   }
   .home {
+    height: 70vh;
     margin-top: 40px;
-    min-height: 33vh;
+  }
+  .photo-perfil {
+    height: 50%;
+    width: auto;
   }
   .photographer-name {
-    font-size: 35px;
+    font-size: 27px;
     margin: 0%;
   }
   .photographer-description {
-    margin: 0%;
-    text-align: center;
+    position: relative;
+    top: -40px;
+    margin: 0%;    
   }
   .photographer-description > p:nth-child(1) {
     font-family: "Playfair Display", serif;
     font-weight: 300;
     font-style: normal;
     line-height: 1.6;
-    text-align: center;
+    text-align: left;
     font-size: 14px;
     max-width: 1100px;
   }
