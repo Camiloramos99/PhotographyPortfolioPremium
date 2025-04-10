@@ -9,7 +9,6 @@ body {
 }
 .principal-container {
   position: static;
-  z-index: -2;
   display: grid;
   grid-column: 2;
   height: 100%;
@@ -124,10 +123,10 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: transform 1.4s ease;
+  transition: transform 0.8s ease;
 }
 .photo-container:hover img {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .photo-container1 {
   display: flex;
@@ -140,7 +139,6 @@ body {
 .photo-1 {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
   aspect-ratio: 1380 / 914;
 }
 .line1-gallery {
@@ -230,15 +228,15 @@ body {
   position: relative;
   background: #333333;
   width: 90%;
-  border: 0.5px solid #ffffff ;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ffffff ;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 .service-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 .package-title {
   position: relative;
@@ -578,5 +576,14 @@ footer p {
   .form-row {
     flex-direction: column;
     gap: 10px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .photo-container:hover img {
+    transform: none;
+  }
+  .service-box:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 }
