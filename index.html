@@ -21,7 +21,6 @@
   </head>
   <body>
     <div class="principal-container">
-      <!-- HOME -->
       <img
         src="img/Photo-Back.webp"
         alt=""
@@ -29,23 +28,51 @@
         height="2000"
         class="background-image"
       />
+      </div>
+
+      <!-- HOME -->
+
       <section class="photographer-profile-section">
+
         <header class="photographer-header">
-          <div class="photographer-profile">
-            <img src="img/Photo-Perfil.jpg" alt="" class="photo-profile">
-            <h1 class="photographer-name">
-              NOMBRE <br> <span class="second-line">FOTÓGRAFA</span>
-            </h1>
+          <div class="photographer-profile-wrapper" >
+            <div class="photographer-profile">
+
+              <div class="photographer-data-container">
+                <img src="img/Photo-Perfil.jpg" alt="" class="photo-profile">
+                <div class="photographer-data">
+                  <h1 class="photographer-name">
+                  MARIA GONZÁLEZ
+                </h1>
+                <p>
+                  Fotógrafa apasionada por la luz natural y las historias sinceras. Actualmente en Buenos Aires, Argentina.
+                </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </header>
+        </header>  
+        
         <article class="photographer-description">
-          <p>
-            Fotógrafa y videógrafa freelance, actualmente en Buenos Aires, Argentina.
-          </p>
-        </article>
+          <div class="description-container">
+            <h2 class="section-title">Pasión por capturar lo inolvidable</h2>
+            <p class="description-text">
+              Creo en la magia de los momentos que no se repiten. Esos gestos, miradas y detalles que muchas veces pasan desapercibidos… pero que dicen todo.
+              Para mí, lo más importante es crear un espacio donde te sientas vos mismo, y contar tu historia con honestidad y emoción.
+            </p>
+        
+            <div class="cta-container">
+              <a href="#contacto" class="btn btn-primary">Reservá tu sesión</a>
+              <a href="#galeria" class="btn btn-secondary">Ver mi trabajo</a>
+            </div>            
+            
+          </div>
+        </article>   
       </section>
 
       <!-- GALLERY -->
+
+      <div id="galeria" class="content-container">
 
       <section class="gallery-container">
         <p class="best-work-title">Best of my work</p>
@@ -167,7 +194,7 @@
               <p>1 hora 30 min</p>
             </div>
             <div>
-              <p>Hasta2 lugares</p>
+              <p>Hasta 2 lugares</p>
             </div>
             <div>
               <p>25 fotos retocadas</p>
@@ -182,7 +209,7 @@
       <!-- CONTACT FORM -->
 
       <section class="form-container">
-        <form action="" class="contact-form">
+        <form action="" id="contacto" class="contact-form">
           <h1>Contáctame</h1>
           <p>
             Para más información sobre mis servicios, te responderé a la
@@ -203,7 +230,8 @@
           <button type="submit">Enviar</button>
         </form>
       </section>
-    </div>
+  </div>
+
     <!-- BUTTON WHATSAPP -->
 
     <button class="btn-whatsApp">
